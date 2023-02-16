@@ -1,0 +1,21 @@
+{
+  "name": "asm",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "json-server-auth --watch db.json"
+  },
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0",
+    "vite": "^4.1.0"
+  },
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "navigo": "^8.11.1"
+  }
+}
