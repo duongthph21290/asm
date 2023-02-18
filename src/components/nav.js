@@ -2,7 +2,7 @@
 
 const nav = () => {
     return (
-      `
+        `
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
           <div class="container">
               <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,9 +16,7 @@ const nav = () => {
                       <li class="nav-item">
                           <a href="#about" class="nav-link">Giới thiệu</a>
                       </li>
-                      <li class="nav-item">
-                          <a href="#resume" class="nav-link">Tóm tắt</a>
-                      </li>
+                      
                   </ul>
                   <ul class="navbar-nav brand">
                       <img src="assets/imgs/avatar2.jpg" alt="" class="brand-img">
@@ -28,8 +26,8 @@ const nav = () => {
                       </li>
                   </ul>
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                          <a href="#portfolio" class="nav-link">Danh mục</a>
+                   <li class="nav-item">
+                          <a href="#resume" class="nav-link">Tóm tắt</a>
                       </li>
                       <li class="nav-item">
                           <a href="#blog" class="nav-link"></a>
@@ -43,6 +41,6 @@ const nav = () => {
       </nav>
       `
     )
-  }
-  
-  export default nav
+}
+
+export default nav

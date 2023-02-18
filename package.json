@@ -15,7 +15,8 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
-    "boostrap": "^2.0.0",
+    "axios": "^1.3.3",
+    "bootstrap": "^5.2.3",
     "navigo": "^8.11.1"
   }
 }
