@@ -1,12 +1,16 @@
-import footer from "../components/footer"
 import header from "../components/header"
 import about from "./about"
+import resume from "./resume"
 import blog from "./blog"
 import contact from "./contact"
-import resume from "./resume"
+import footer from "../components/footer"
 
 
-const homePage = () => {
+
+
+
+
+const HomePage = () => {
   return (
     `
     ${header()}
@@ -19,4 +23,4 @@ const homePage = () => {
   )
 }
 
-export default homePage
+export default HomePage;
