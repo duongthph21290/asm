@@ -42,8 +42,8 @@ const about = () => {
                       <span class="line mb-5"></span>
                       <h5 class="mb-3">${project.desc}</h5>
                       <p class="mt-20">${project.author}</p>
-                      <p class="mt-20">SĐT : ${project.sdt}</p>
-                      <p class="mt-20">Email : ${project.email}</p>
+                      <p class="mt-3">SĐT : ${project.sdt}</p>
+                      <p class="mt-3">Email : ${project.email}</p>
 
                     </div>
                   
