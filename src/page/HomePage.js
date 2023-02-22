@@ -1,8 +1,8 @@
 import header from "../components/header"
-import about from "./about"
-import resume from "./resume"
-import blog from "./blog"
-import contact from "./contact"
+import about from "./About"
+// import resume from "./Resume"
+import blog from "./Blog"
+import contact from "./Contact"
 import footer from "../components/footer"
 
 
@@ -15,7 +15,6 @@ const HomePage = () => {
     `
     ${header()}
     ${about()}
-    ${resume()}
     ${blog()}
     ${contact()}
     ${footer()}

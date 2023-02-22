@@ -41,7 +41,8 @@ const AdminProjectsPage = () => {
                 <tr>
                     <th>#</th>
                     <th>Tên dự án</th>
-                    <th>Tác giả</th>
+                    <th>Giới thiệu</th>
+                    <th>Giới thiệu thêm</th>
                     <th>Gmail</th>
                     <th>SDT</th>
                     <th>Link Github</th>
@@ -57,14 +58,15 @@ const AdminProjectsPage = () => {
                         <tr>
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
-                            <td>${project.desc}</td> 
+                            <td>${project.desc}</td>
+                            <td>${project.desc1}</td>  
                             <td>${project.email}</td>
                             <td>${project.sdt}</td>
-                            <td>${project.link}</td>
-                            <td></td>
+                            <td><a href ="${project.link}">${project.link}</a></td>
+                            <td ><img  src ="${project.images}"style="width:80px"></td>
                             <td>${project.author}</td>
                             <td>
-                            <button data-name="Vu" data-id="${project.id}"class="btn btn-danger btn-remove" onclick="return confirm('Bạn có muốn xóa sản phẩm không???')">Xóa</button>
+                            <button data-name="Duong" data-id="${project.id}"class="btn btn-danger btn-remove"; onclick="return confirm('Bạn có muốn xóa sản phẩm không?');">Xóa</button>
                             <a href="/admin/projects/${project.id}/edit" class="btn btn-primary btn-edit">Sửa</a>
                             </td>
                         </tr>
