@@ -34,7 +34,9 @@ const about = () => {
                       <p class="mt-20"><a href = "${project.link}">${project.link}</a></p>
               </div>
                  `;
-    })}
+    }
+    ) .join("")
+}
 
 
 

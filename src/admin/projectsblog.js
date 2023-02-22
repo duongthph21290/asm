@@ -1,16 +1,16 @@
-import { deleteProject, getProjects } from "../api/project";
+import { deleteBlog, getBlog, getBlogs } from "../api/projectsblog";
 import { useEffect, useState } from "../lib";
 import axios from "axios";
 import headeradm from "@/components/HeaderAdmin";
 
-const AdminProjectsPage = () => {
+const AdminProjectsBlog = () => {
     // localStorage
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         (async () => {
             try {
-                setProjects(await getProjects());
+                setProjects(await getBlogs());
             } catch (error) {
                 console.log(error);
             }
@@ -24,7 +24,7 @@ const AdminProjectsPage = () => {
                 try {
                     const id = this.dataset.id;
 
-                    deleteProject(id).then(() => {
+                    deleteBlog(id).then(() => {
                         const newProjects = projects.filter((project) => project.id != id);
                         setProjects(newProjects);
                     });
@@ -38,17 +38,13 @@ const AdminProjectsPage = () => {
     return `
     ${headeradm()}
     <div class="container pt-5">
-    <h1>Quản lý About</h1>
+    <h1>Quản lý Blog</h1>
+    <button style="	margin-bottom:25px; width: 150px;border-radius: 5px;"><a style="color: blue; font-weight: bold;font-size: 16px; text-decoration: none ;" href="/admin/projectsaddblog">Thêm sản phẩm</a></button>
     <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
                     <th>Tên dự án</th>
-                    <th>Giới thiệu</th>
-                    <th>Giới thiệu thêm</th>
-                    <th>Gmail</th>
-                    <th>SDT</th>
-                    <th>Link Github</th>
                     <th>Image</th>
                     <th>Mô tả</th>
                     <th>Nút ấn</th>
@@ -56,26 +52,21 @@ const AdminProjectsPage = () => {
             </thead>
             <tbody>
                 ${projects
-                    .map((project, index) => {
-                        return `
+            .map((project, index) => {
+                return `
                         <tr>
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
-                            <td>${project.desc}</td>
-                            <td>${project.desc1}</td>  
-                            <td>${project.email}</td>
-                            <td>${project.sdt}</td>
-                            <td><a href ="${project.link}">${project.link}</a></td>
                             <td ><img  src ="${project.images}"style="width:80px"></td>
                             <td>${project.author}</td>
                             <td>
-                            <button data-name="Duong" data-id="${project.id}"class="btn btn-danger"; onClick="confirm('Bạn có chắc chắn xóa không?')" >Xóa</button>
-                            <a href="/admin/projects/${project.id}/edit" class="btn btn-primary btn-edit">Sửa</a>
+                            <button data-name="Duong" data-id="${project.id}"class="btn btn-danger" onClick="confirm('Bạn có chắc chắn xóa không?')">Xóa</button>
+                            <a href="/admin/projectseditblog/${project.id}/edit" class="btn btn-primary btn-edit">Sửa</a>
                             </td>
                         </tr>
                     `;
-                    })
-                    .join("")} 
+            })
+            .join("")} 
                 
                 
             </tbody>
@@ -88,4 +79,4 @@ const AdminProjectsPage = () => {
 
 };
 
-export default AdminProjectsPage;
+export default AdminProjectsBlog;
