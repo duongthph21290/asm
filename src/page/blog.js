@@ -26,7 +26,7 @@ const blog = () => {
           <div class="row">
               <div class="blog-card">
                   <div class="img-holder">
-                    <img src ="${project.images}">
+                  <a href =""><img src ="${project.images}"></a>  
                   </div>
                   <div class="content-holder">
                   <h3 class="font-weight-light">${project.name}</h3>

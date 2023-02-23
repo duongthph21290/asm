@@ -1,7 +1,7 @@
 import instance from "./config";
 
 const getContacts = () => {
-    return instance.get(`/contact`);
+    return instance.get(`/contacts`);
 };
 const getContact = (id) => {
     return instance.get(`/contacts/${id}`);

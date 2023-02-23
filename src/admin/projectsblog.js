@@ -57,7 +57,7 @@ const AdminProjectsBlog = () => {
                         <tr>
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
-                            <td ><img  src ="${project.images}"style="width:80px"></td>
+                            <td><img  src ="${project.images}"style="width:80px" ></td>
                             <td>${project.author}</td>
                             <td>
                             <button data-name="Duong" data-id="${project.id}"class="btn btn-danger" onClick="confirm('Bạn có chắc chắn xóa không?')">Xóa</button>
