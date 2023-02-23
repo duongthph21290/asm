@@ -22,7 +22,7 @@ const blog = () => {
  ${projects.map((project, index) => {
         return `   
     <div class="container">
-         
+
           <div class="row">
               <div class="blog-card">
                   <div class="img-holder">
